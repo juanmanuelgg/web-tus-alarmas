@@ -1,0 +1,79 @@
+<header>
+  <img class="imgcontainer" src="logo_app 6.png" alt="icono" class="icono">
+  <button type="button" class="cancelbtn" (click)="changeMode()">{{loginMode ? 'Registrate' : 'Ingresar'}}</button>
+</header>
+
+<div class="titulos">
+  <h1>Tus alarmas</h1>
+  <h2>{{loginMode ? 'Login' : 'Registrate'}}</h2>
+</div>
+<div id="id01" class="modal">
+<!-- Modo login -->
+  <form *ngIf="loginMode" class="modal-content" [formGroup]="loginForm" (ngSubmit)="onSubmitLogin()">
+    <div class="container">
+      <label for="email"><b>Email</b></label>
+      <input type="email" placeholder="Email" formControlName="email">
+      <div class="errorval" *ngIf="loginRequested && this.loginForm.controls.email.hasError('email')">
+        Debe ser un email valido.
+      </div>
+      <div class="errorval" *ngIf="loginRequested && this.loginForm.controls.email.hasError('required')">
+        El email es requerido.
+      </div>
+
+      <label for="password"><b>Contraseña</b></label>
+      <input type="password" placeholder="Contraseña" formControlName="password">
+      <div class="errorval" *ngIf="loginRequested && this.loginForm.controls.password.hasError('minlength')">
+        La contraseña debe tener al menos 16 caracteres.
+      </div>
+      <div class="errorval" *ngIf="loginRequested && this.loginForm.controls.password.hasError('required')">
+        La contraseña es requerida.
+      </div>
+
+      <button type="submit">Ingresar</button>
+    </div>
+    <span class="psw"><a (click)="openDialog()">Recordar contraseña</a></span>
+  </form>
+
+  <form *ngIf="!loginMode" class="modal-content" [formGroup]="registerForm" (ngSubmit)="onSubmitRegister()">
+    <div class="container">
+      <label for="nombres"><b>Nombres</b></label>
+      <input type="text" placeholder="Nombres" formControlName="nombres" required>
+      <div class="errorval" *ngIf="registerRequested && this.registerForm.controls.nombres.hasError('minlength')">
+        Los nombres deben tener al menos 2 caracteres.
+      </div>
+      <div class="errorval" *ngIf="registerRequested && this.registerForm.controls.nombres.hasError('required')">
+        Los nombres son requeridos.
+      </div>
+
+      <label for="apellidos"><b>Apellidos</b></label>
+      <input type="text" placeholder="Apellidos" formControlName="apellidos">
+      <div class="errorval" *ngIf="registerRequested && this.registerForm.controls.apellidos.hasError('minlength')">
+        Los apellidos deben tener al menos 2 caracteres.
+      </div>
+      <div class="errorval" *ngIf="registerRequested && this.registerForm.controls.apellidos.hasError('required')">
+        Los apellidos son requeridos.
+      </div>
+
+      <label for="email"><b>Email</b></label>
+      <input type="email" placeholder="Email" formControlName="email">
+      <div class="errorval" *ngIf="registerRequested && this.registerForm.controls.email.hasError('email')">
+        Debe ser un email valido.
+      </div>
+      <div class="errorval" *ngIf="registerRequested && this.registerForm.controls.email.hasError('required')">
+        El email es requerido.
+      </div>
+
+      <label for="password"><b>Contraseña</b></label>
+      <input type="password" placeholder="Contraseña" formControlName="password">
+      <div class="errorval" *ngIf="registerRequested && this.registerForm.controls.password.hasError('minlength')">
+        La contraseña debe tener al menos 16 caracteres.
+      </div>
+      <div class="errorval" *ngIf="registerRequested && this.registerForm.controls.password.hasError('required')">
+        La contraseña es requerida.
+      </div>
+
+      <button type="submit">Registrarme</button>
+    </div>
+
+  </form>
+</div>

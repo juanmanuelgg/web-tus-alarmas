@@ -1,0 +1,35 @@
+<h1>Listado de alarmas</h1>
+
+<div class="content">
+  <mat-grid-list [cols]="breakpoint">
+    <mat-grid-tile class="tile-card" *ngFor="let alarma of alarmasMostrar">
+      <mat-card class="content-card" appearance="outlined" (click)="openDetail(alarma.id)">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>{{alarma.name}}</mat-card-title>
+            <mat-card-subtitle>{{alarma.description}}</mat-card-subtitle>
+            <img mat-card-md-image [src]="alarma.image" >
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+          {{alarma.active ? '🟢' : '🔴'}}
+          {{alarma.alarms}}
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<footer>
+  <mat-paginator [length]="length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="[5, 10, 25]"
+    [showFirstLastButtons]="true"
+    (page)="handlePageEvent($event)"
+    aria-label="Select page">
+  </mat-paginator>
+</footer>
+
+<button class="rounded" mat-fab extended (click)="openDetail()">
+  <mat-icon>add</mat-icon>
+</button>
