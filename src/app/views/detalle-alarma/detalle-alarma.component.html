@@ -1,1 +1,48 @@
-<p>detalle-alarma works! {{ alarma | json }}</p>
+<h1>Detalles de la alarma</h1>
+
+<div id="id01" class="modal">
+  <form class="modal-content" [formGroup]="detalleAlarmaForm" (ngSubmit)="alarma ? editAlarma() : createsAlarma()">
+    <div class="container">
+      <label for="name"><b>Nombre</b></label>
+      <input type="text" placeholder="Nombre" formControlName="name">
+    <div class="errorval" *ngIf="this.detalleAlarmaForm.controls.name.hasError('minlength')">
+      El nombre debe tener al menos 1 caracter.
+    </div>
+    <div class="errorval" *ngIf="this.detalleAlarmaForm.controls.name.hasError('required')">
+      El nombre es requeridos.
+    </div>
+
+    <label for="description"><b>Descripción</b></label>
+    <input type="text" placeholder="Apellidos" formControlName="description">
+    <div class="errorval" *ngIf="this.detalleAlarmaForm.controls.description.hasError('minlength')">
+      La descripción debe tener al menos 1 caracter.
+    </div>
+    <div class="errorval" *ngIf="this.detalleAlarmaForm.controls.description.hasError('required')">
+      La descripción es requerida.
+    </div>
+
+    <label for="image"><b>Imagen</b></label>
+    <img *ngIf="alarma" [src]="alarma? alarma.image : ''" alt="Imagen" width="100" height="100">
+    <input type="text" placeholder="Imagen" formControlName="image">
+    <div class="errorval" *ngIf="this.detalleAlarmaForm.controls.image.hasError('pattern')">
+      La URL de la imagen no es válida.
+    </div>
+    <div class="errorval" *ngIf="this.detalleAlarmaForm.controls.image.hasError('required')">
+      El email es requerido.
+    </div>
+
+    <label for="alarms"><b>Alarmas</b></label>
+    <input type="text" placeholder="Alarmas" formControlName="alarms">
+    <div class="errorval" *ngIf="this.detalleAlarmaForm.controls.alarms.hasError('pattern')">
+      El patron de las alarmas debe ser del tipo hh:mm o una lista de estos separados por coma.
+    </div>
+    <div class="errorval" *ngIf="this.detalleAlarmaForm.controls.image.hasError('required')">
+      Las alarmas son requeridas.
+    </div>
+
+    <mat-slide-toggle ngModel formControlName="active">Activa</mat-slide-toggle>
+
+    <button type="submit">{{alarma ? 'Editar': 'Crear'}}</button>
+    </div>
+  </form>
+</div>

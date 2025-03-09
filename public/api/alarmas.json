@@ -1,24 +1,266 @@
 [
-  {"id":1, "name": "Trabajo", "description": "Movimientos de cuello y hombros", "image": "/5688812_58978.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  {"id":2, "name": "Universidad", "description": "Enfoque en punto lejano y parpadeo controlado", "image": "/5259951_20686.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  {"id":3, "name": "Home Office", "description": "Rotación de muñecas y estiramiento de dedos", "image": "/12260516_4898280.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  {"id":4, "name": "Iglesia", "description": "Elevación de talones y flexión de rodillas", "image": "/28840965_7385221.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  {"id":5, "name": "lol5", "description": "lol", "image": "https://material.angular.io/assets/img/examples/shiba2.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  {"id":6, "name": "lol6", "description": "lol", "image": "https://material.angular.io/assets/img/examples/shiba2.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  {"id":7, "name": "lol7", "description": "lol", "image": "https://material.angular.io/assets/img/examples/shiba2.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  {"id":8, "name": "lol8", "description": "lol", "image": "https://material.angular.io/assets/img/examples/shiba2.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  {"id":9, "name": "lol9", "description": "lol", "image": "https://material.angular.io/assets/img/examples/shiba2.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  { "id":10, "name": "lol10", "description": "lol", "image": "https://material.angular.io/assets/img/examples/shiba2.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  { "id":11, "name": "lol11", "description": "lol", "image": "https://material.angular.io/assets/img/examples/shiba2.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  { "id":12, "name": "lol12", "description": "lol", "image": "https://material.angular.io/assets/img/examples/shiba2.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  { "id":13, "name": "lol13", "description": "lol", "image": "https://material.angular.io/assets/img/examples/shiba2.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  { "id":14, "name": "lol14", "description": "lol", "image": "https://material.angular.io/assets/img/examples/shiba2.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  { "id":15, "name": "lol15", "description": "lol", "image": "https://material.angular.io/assets/img/examples/shiba2.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  { "id":16, "name": "lol16", "description": "lol", "image": "https://material.angular.io/assets/img/examples/shiba2.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  { "id":17, "name": "lol17", "description": "lol", "image": "https://material.angular.io/assets/img/examples/shiba2.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  { "id":18, "name": "lol18", "description": "lol", "image": "https://material.angular.io/assets/img/examples/shiba2.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  { "id":19, "name": "lol19", "description": "lol", "image": "https://material.angular.io/assets/img/examples/shiba2.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  { "id":20, "name": "lol20", "description": "lol", "image": "https://material.angular.io/assets/img/examples/shiba2.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  { "id":21, "name": "lol21", "description": "lol", "image": "https://material.angular.io/assets/img/examples/shiba2.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true},
-  { "id":22, "name": "lol22", "description": "lol", "image": "https://material.angular.io/assets/img/examples/shiba2.jpg", "alarms":["07:00", "13:00", "18:00"], "active": true}
+  {
+    "id": 1,
+    "name": "Universidad",
+    "description": "Rotación de muñecas",
+    "image": "http://localhost:4200/image2.jpg",
+    "alarms": [
+      "17:34",
+      "07:56",
+      "07:14"
+    ],
+    "active": false
+  },
+  {
+    "id": 2,
+    "name": "Gym",
+    "description": "Estiramiento de piernas",
+    "image": "http://localhost:4200/image3.jpg",
+    "alarms": [
+      "17:07",
+      "21:12",
+      "19:01"
+    ],
+    "active": true
+  },
+  {
+    "id": 3,
+    "name": "Parque",
+    "description": "Respiración profunda",
+    "image": "http://localhost:4200/image4.jpg",
+    "alarms": [
+      "19:14",
+      "13:56",
+      "02:41"
+    ],
+    "active": true
+  },
+  {
+    "id": 4,
+    "name": "Cine",
+    "description": "Ejercicios de visión",
+    "image": "http://localhost:4200/image5.jpg",
+    "alarms": [
+      "00:48",
+      "14:25",
+      "16:09"
+    ],
+    "active": true
+  },
+  {
+    "id": 5,
+    "name": "Biblioteca",
+    "description": "Postura ergonómica",
+    "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
+    "alarms": [
+      "02:03",
+      "15:49",
+      "09:51"
+    ],
+    "active": false
+  },
+  {
+    "id": 6,
+    "name": "Supermercado",
+    "description": "Meditación rápida",
+    "image": "http://localhost:4200/image1.jpg",
+    "alarms": [
+      "22:56",
+      "03:51",
+      "10:27"
+    ],
+    "active": false
+  },
+  {
+    "id": 7,
+    "name": "Café",
+    "description": "Relajación muscular",
+    "image": "http://localhost:4200/image2.jpg",
+    "alarms": [
+      "04:28",
+      "09:38",
+      "07:21"
+    ],
+    "active": true
+  },
+  {
+    "id": 8,
+    "name": "Museo",
+    "description": "Ejercicios de estiramiento",
+    "image": "http://localhost:4200/image3.jpg",
+    "alarms": [
+      "04:32",
+      "05:03",
+      "10:40"
+    ],
+    "active": true
+  },
+  {
+    "id": 9,
+    "name": "Playa",
+    "description": "Pausas activas",
+    "image": "http://localhost:4200/image4.jpg",
+    "alarms": [
+      "07:06",
+      "21:00",
+      "23:34"
+    ],
+    "active": false
+  },
+  {
+    "id": 10,
+    "name": "Trabajo",
+    "description": "Ejercicios de cuello y hombros",
+    "image": "http://localhost:4200/image5.jpg",
+    "alarms": [
+      "18:54",
+      "13:45",
+      "17:40"
+    ],
+    "active": false
+  },
+  {
+    "id": 11,
+    "name": "Universidad",
+    "description": "Rotación de muñecas",
+    "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
+    "alarms": [
+      "10:54",
+      "13:20",
+      "07:03"
+    ],
+    "active": false
+  },
+  {
+    "id": 12,
+    "name": "Gym",
+    "description": "Estiramiento de piernas",
+    "image": "http://localhost:4200/image1.jpg",
+    "alarms": [
+      "22:32",
+      "13:49",
+      "02:05"
+    ],
+    "active": false
+  },
+  {
+    "id": 13,
+    "name": "Parque",
+    "description": "Respiración profunda",
+    "image": "http://localhost:4200/image2.jpg",
+    "alarms": [
+      "10:53",
+      "05:53",
+      "16:46"
+    ],
+    "active": false
+  },
+  {
+    "id": 14,
+    "name": "Cine",
+    "description": "Ejercicios de visión",
+    "image": "http://localhost:4200/image3.jpg",
+    "alarms": [
+      "14:21",
+      "09:04",
+      "16:48"
+    ],
+    "active": true
+  },
+  {
+    "id": 15,
+    "name": "Biblioteca",
+    "description": "Postura ergonómica",
+    "image": "http://localhost:4200/image4.jpg",
+    "alarms": [
+      "22:47",
+      "01:16",
+      "17:19"
+    ],
+    "active": false
+  },
+  {
+    "id": 16,
+    "name": "Supermercado",
+    "description": "Meditación rápida",
+    "image": "http://localhost:4200/image5.jpg",
+    "alarms": [
+      "15:44",
+      "19:43",
+      "20:39"
+    ],
+    "active": false
+  },
+  {
+    "id": 17,
+    "name": "Café",
+    "description": "Relajación muscular",
+    "image": "https://material.angular.io/assets/img/examples/shiba2.jpg",
+    "alarms": [
+      "06:09",
+      "19:23",
+      "06:24"
+    ],
+    "active": false
+  },
+  {
+    "id": 18,
+    "name": "Museo",
+    "description": "Ejercicios de estiramiento",
+    "image": "http://localhost:4200/image1.jpg",
+    "alarms": [
+      "04:53",
+      "07:25",
+      "18:57"
+    ],
+    "active": true
+  },
+  {
+    "id": 19,
+    "name": "Playa",
+    "description": "Pausas activas",
+    "image": "http://localhost:4200/image2.jpg",
+    "alarms": [
+      "16:49",
+      "13:01",
+      "15:33"
+    ],
+    "active": true
+  },
+  {
+    "id": 20,
+    "name": "Trabajo",
+    "description": "Ejercicios de cuello y hombros",
+    "image": "http://localhost:4200/image3.jpg",
+    "alarms": [
+      "02:47",
+      "20:29",
+      "20:13"
+    ],
+    "active": false
+  },
+  {
+    "id": 21,
+    "name": "Universidad",
+    "description": "Rotación de muñecas",
+    "image": "http://localhost:4200/image4.jpg",
+    "alarms": [
+      "11:58",
+      "11:29",
+      "07:52"
+    ],
+    "active": true
+  },
+  {
+    "id": 22,
+    "name": "Gym",
+    "description": "Estiramiento de piernas",
+    "image": "http://localhost:4200/image5.jpg",
+    "alarms": [
+      "16:16",
+      "22:16",
+      "13:50"
+    ],
+    "active": true
+  }
 ]

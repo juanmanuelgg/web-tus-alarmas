@@ -1,5 +1,16 @@
 <header>
-  <a href="/app"><img class="imgcontainer" src="logo_app 6.png" alt="icono" class="icono"></a>
-  <button type="button" class="logoutbtn" (click)="logout()">Logout</button>
+  <div class="header-container">
+    <div class="title">
+      <a [routerLink]="['/app']"><img class="imgcontainer" src="logo_app 6.png" alt="icono" class="icono"></a>
+    </div>
+    <nav class="navigationbtns">
+      <nav class="listbtns">
+        <button type="button" [class]="listAlarms" routerLink="/app/lista-alarmas">Tus Alarmas</button>
+        <button type="button" [class]="listUbications" routerLink="/app/lista-ubicaciones">Tus Ubicaciones</button>
+        <button type="button" [class]="listReports" routerLink="/app/reportes">Tus Reportes</button>
+      </nav>
+      <button type="button" class="logoutbtn" (click)="logout()">Logout</button>
+    </nav>
+</div>
 </header>
 <router-outlet />

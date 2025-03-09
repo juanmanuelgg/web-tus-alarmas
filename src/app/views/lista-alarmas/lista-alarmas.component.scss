@@ -7,7 +7,7 @@
   display: flex;
   justify-content: center;
   position: fixed;
-  right: 25px;
+  right: 16px;
   bottom: 100px;
   border-radius: 50%;
   width: 60px;
@@ -22,8 +22,9 @@
 }
 
 .content {
-  min-height: 100vh;
-  overflow-y: auto; /* Scroll if needed */
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 92px;
 }
 
 .tile-card {
@@ -45,3 +46,14 @@ footer {
   padding: 10px;
 }
 
+.tile-card {
+  width: 100%; /* Ensures the grid tile fills the available space */
+  display: flex; /* Helps stretch child content */
+}
+
+.content-card {
+  width: 100%; /* Ensures the card inside stretches */
+  height: 100%; /* Optional: Adjust height if needed */
+  display: flex;
+  flex-direction: column;
+}
