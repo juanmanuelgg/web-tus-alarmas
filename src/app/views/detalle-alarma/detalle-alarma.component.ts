@@ -22,14 +22,11 @@ export class DetalleAlarmaComponent implements OnInit {
   alarma?: Alarma;
 
   detalleAlarmaForm = new FormGroup({
-    name: new FormControl('', [Validators.required, Validators.minLength(1)]),
-    description: new FormControl('', [
-      Validators.required,
-      Validators.minLength(1),
-    ]),
+    name: new FormControl('', [Validators.required]),
+    description: new FormControl('', [Validators.required]),
     image: new FormControl('', [
       Validators.required,
-      Validators.pattern(/(http(s?):)([/|.|\w|\s|-])*(:[0-9]*)?([/|.|\w|\s|-])*\.(?:jpg|gif|png|svg)/),
+      Validators.pattern(/(http(s?):)([/|.|\w|\s|-])*(:[0-9]*)?([/|.|\w|\s|-])*\.(?:jp(e?)g|gif|png|svg)$/),
     ]),
     alarms: new FormControl('', [
       Validators.required,

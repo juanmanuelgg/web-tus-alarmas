@@ -22,6 +22,7 @@
     </div>
 
     <label for="image"><b>Imagen</b></label>
+    <br/>
     <img *ngIf="alarma" [src]="alarma? alarma.image : ''" alt="Imagen" width="100" height="100">
     <input type="text" placeholder="Imagen" formControlName="image">
     <div class="errorval" *ngIf="this.detalleAlarmaForm.controls.image.hasError('pattern')">
@@ -36,11 +37,11 @@
     <div class="errorval" *ngIf="this.detalleAlarmaForm.controls.alarms.hasError('pattern')">
       El patron de las alarmas debe ser del tipo hh:mm o una lista de estos separados por coma.
     </div>
-    <div class="errorval" *ngIf="this.detalleAlarmaForm.controls.image.hasError('required')">
+    <div class="errorval" *ngIf="this.detalleAlarmaForm.controls.alarms.hasError('required')">
       Las alarmas son requeridas.
     </div>
 
-    <mat-slide-toggle ngModel formControlName="active">Activa</mat-slide-toggle>
+    <mat-slide-toggle formControlName="active">Activa</mat-slide-toggle>
 
     <button type="submit">{{alarma ? 'Editar': 'Crear'}}</button>
     </div>

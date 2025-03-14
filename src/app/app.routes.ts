@@ -4,9 +4,9 @@ import { LoginRegisterComponent } from './views/login-register/login-register.co
 import { HomeComponent } from './views/home/home.component';
 import { ListaAlarmasComponent } from './views/lista-alarmas/lista-alarmas.component';
 import { DetalleAlarmaComponent } from './views/detalle-alarma/detalle-alarma.component';
-// import { ListaUbicacionesComponent } from './views/lista-ubicaciones/lista-ubicaciones.component';
-// import { DetalleUbicacionComponent } from './views/detalle-ubicacion/detalle-ubicacion.component';
-// import { ReportesComponent } from './views/reportes/reportes.component';
+import { ListaUbicacionesComponent } from './views/lista-ubicaciones/lista-ubicaciones.component';
+import { DetalleUbicacionComponent } from './views/detalle-ubicacion/detalle-ubicacion.component';
+import { ReportesComponent } from './views/reportes/reportes.component';
 import { PageNotFoundComponent } from './views/page-not-found/page-not-found.component';
 import { sesionGuardGuard } from './guards/sesion-guard.guard';
 import { sesionGuardChildGuard } from './guards/sesion-guard-child.guard';
@@ -24,9 +24,10 @@ export const routes: Routes = [
       { path: 'lista-alarmas', component: ListaAlarmasComponent},
       { path: 'detalle-alarma', component: DetalleAlarmaComponent},
       { path: 'detalle-alarma/:id', component: DetalleAlarmaComponent},
-      // { path: 'lista-ubicaciones', component: ListaUbicacionesComponent},
-      // { path: 'detalle-ubicacion', component: DetalleUbicacionComponent},
-      // { path: 'reportes', component: ReportesComponent},
+      { path: 'lista-ubicaciones', component: ListaUbicacionesComponent},
+      { path: 'detalle-ubicacion', component: DetalleUbicacionComponent},
+      { path: 'detalle-ubicacion/:id', component: DetalleUbicacionComponent},
+      { path: 'reportes', component: ReportesComponent},
     ],
   },
   { path: '**', component: PageNotFoundComponent}

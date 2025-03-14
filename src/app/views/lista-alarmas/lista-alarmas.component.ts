@@ -16,6 +16,9 @@ import { fromEvent, Observable, Subscription } from 'rxjs';
 import { AlarmasService } from '../../services/alarmas/alarmas.service';
 import Alarma from '../../services/alarmas/alarma';
 
+import { UbicacionesService } from '../../services/ubicaciones/ubicaciones.service';
+import Ubicacion from '../../services/ubicaciones/ubicacion';
+
 @Component({
   selector: 'app-lista-alarmas',
   imports: [
