@@ -1,0 +1,59 @@
+.titulos {
+  text-align: center;
+  font-size: 20px;
+}
+
+.rounded {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  right: 16px;
+  bottom: 100px;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+  cursor: pointer;
+  padding: 0%;
+  padding-top: 17px;
+  margin: 0%;
+}
+
+.content {
+  width: 95%;
+  margin: 0 auto;
+  padding-bottom: 92px;
+}
+
+.tile-card {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.content-card {
+  cursor: pointer;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+.tile-card {
+  width: 100%; /* Ensures the grid tile fills the available space */
+  display: flex; /* Helps stretch child content */
+}
+
+.content-card {
+  width: 100%; /* Ensures the card inside stretches */
+  height: 100%; /* Optional: Adjust height if needed */
+  display: flex;
+  flex-direction: column;
+}

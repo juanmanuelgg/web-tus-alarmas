@@ -1,10 +1,71 @@
 <h1>Reportes</h1>
 
-<div style="text-align:center">
-  <apx-chart
-    [series]="chartOptions.series"
-    [chart]="chartOptions.chart"
-    [xaxis]="chartOptions.xaxis"
-    [title]="chartOptions.title"
-  ></apx-chart>
+<div class="content">
+  <mat-grid-list [cols]="breakpoint" [gutterSize]="'16px'">
+    <mat-grid-tile class="tile-card">
+      <mat-card class="content-card" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>Alarmas atendidas </mat-card-title>
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+          <hr>
+          <div style="text-align:center">
+            <apx-chart
+              [series]="chartOptions1.series"
+              [chart]="chartOptions1.chart"
+              [xaxis]="chartOptions1.xaxis"
+              [title]="chartOptions1.title"
+            ></apx-chart>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile class="tile-card">
+      <mat-card class="content-card" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>Alarmas atendidas el año pasado</mat-card-title>
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+          <hr>
+          <div style="text-align:center">
+            <apx-chart
+            [series]="chartOptions2.series"
+            [chart]="chartOptions2.chart"
+            [dataLabels]="chartOptions2.dataLabels"
+            [title]="chartOptions2.title"
+            [colors]="chartOptions2.colors"
+            ></apx-chart>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+    <mat-grid-tile class="tile-card">
+      <mat-card class="content-card" appearance="outlined">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>Alarmas atendidas este año</mat-card-title>
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+          <hr>
+          <div style="text-align:center">
+            <apx-chart
+            [series]="chartOptions3.series"
+            [chart]="chartOptions3.chart"
+            [dataLabels]="chartOptions3.dataLabels"
+            [title]="chartOptions3.title"
+            [colors]="chartOptions3.colors"
+            ></apx-chart>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+
+  </mat-grid-list>
 </div>
