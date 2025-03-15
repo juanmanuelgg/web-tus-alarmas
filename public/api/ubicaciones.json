@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "name": "Casa",
+    "description": "Ubicación de la casa de la familia",
+    "image": "http://localhost:4200/image1.jpg",
+    "latitude": "19.432608",
+    "longitude": "-99.133209",
+    "radio": 100,
+    "active": true
+  },
+  {
+    "id": 2,
+    "name": "Trabajo",
+    "description": "Ubicación de la oficina",
+    "image": "http://localhost:4200/image2.jpg",
+    "latitude": "19.432608",
+    "longitude": "-99.133209",
+    "radio": 100,
+    "active": true
+  }
+]

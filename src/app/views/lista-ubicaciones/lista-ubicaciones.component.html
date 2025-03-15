@@ -1,0 +1,34 @@
+<h1>Listado de ubicaciones</h1>
+
+<div class="content">
+  <mat-grid-list cols="1" rowHeight="100px" gutterSize="16px">
+    <mat-grid-tile class="tile-card" *ngFor="let ubicacion of ubicacionesMostrar">
+      <mat-card class="content-card" appearance="outlined" (click)="openDetail(ubicacion.id)">
+        <mat-card-header>
+          <mat-card-title-group>
+            <mat-card-title>{{ubicacion.name}}</mat-card-title>
+            <mat-card-subtitle>{{ubicacion.description}}</mat-card-subtitle>
+          </mat-card-title-group>
+        </mat-card-header>
+        <mat-card-content>
+          <hr>
+          {{ubicacion.active ? '🟢' : '🔴'}} {{ubicacion.latitude}}, {{ubicacion.longitude}} ({{ubicacion.radio}}[m])
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<footer>
+  <mat-paginator [length]="length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="[5, 10, 25]"
+    [showFirstLastButtons]="true"
+    (page)="handlePageEvent($event)"
+    aria-label="Select page">
+  </mat-paginator>
+</footer>
+
+<button class="rounded" mat-fab extended (click)="openDetail()">
+  <mat-icon>add</mat-icon>
+</button>

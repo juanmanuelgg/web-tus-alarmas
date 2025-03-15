@@ -1,0 +1,61 @@
+<h1>Detalles de la ubicacion</h1>
+
+<div id="id01" class="modal">
+  <form class="modal-content" [formGroup]="detalleUbicacionForm" (ngSubmit)="ubicacion ? editUbicacion() : createsUbicacion()">
+    <div class="container">
+      <label for="name"><b>Nombre</b></label>
+      <input type="text" placeholder="Nombre" formControlName="name">
+    <div class="errorval" *ngIf="this.detalleUbicacionForm.controls.name.hasError('minlength')">
+      El nombre debe tener al menos 1 caracter.
+    </div>
+    <div class="errorval" *ngIf="this.detalleUbicacionForm.controls.name.hasError('required')">
+      El nombre es requeridos.
+    </div>
+
+    <label for="description"><b>Descripción</b></label>
+    <input type="text" placeholder="Apellidos" formControlName="description">
+    <div class="errorval" *ngIf="this.detalleUbicacionForm.controls.description.hasError('minlength')">
+      La descripción debe tener al menos 1 caracter.
+    </div>
+    <div class="errorval" *ngIf="this.detalleUbicacionForm.controls.description.hasError('required')">
+      La descripción es requerida.
+    </div>
+
+    <label for="image"><b>Imagen</b></label>
+    <br/>
+    <img *ngIf="ubicacion" [src]="ubicacion? ubicacion.image : ''" alt="Imagen" width="100" height="100">
+    <input type="text" placeholder="Imagen" formControlName="image">
+    <div class="errorval" *ngIf="this.detalleUbicacionForm.controls.image.hasError('pattern')">
+      La URL de la imagen no es válida.
+    </div>
+    <div class="errorval" *ngIf="this.detalleUbicacionForm.controls.image.hasError('required')">
+      El email es requerido.
+    </div>
+
+    <label for="latitude"><b>Latitud</b></label>
+    <input type="number" placeholder="Latitud" formControlName="latitude">
+    <div class="errorval" *ngIf="this.detalleUbicacionForm.controls.latitude.hasError('required')">
+      La latitud es requerida.
+    </div>
+
+    <label for="longitude"><b>Longitud</b></label>
+    <input type="number" placeholder="Longitud" formControlName="longitude">
+    <div class="errorval" *ngIf="this.detalleUbicacionForm.controls.longitude.hasError('required')">
+      La longitud es requerida.
+    </div>
+
+    <label for="radio"><b>Radio</b></label>
+    <input type="number" placeholder="Radio" formControlName="radio">
+    <div class="errorval" *ngIf="this.detalleUbicacionForm.controls.radio.hasError('required')">
+      El radio es requerido.
+    </div>
+    <div class="errorval" *ngIf="this.detalleUbicacionForm.controls.radio.hasError('min')">
+      El radio minimo son 10 metros.
+    </div>
+
+    <mat-slide-toggle formControlName="active">Activa</mat-slide-toggle>
+
+    <button type="submit">{{ubicacion ? 'Editar': 'Crear'}}</button>
+    </div>
+  </form>
+</div>
